@@ -22,6 +22,7 @@ $(function () {
 
 function processResult(result) {
     const theTable = $('#TableBody');
+    theTable.children().remove();
     if (result instanceof Array) {
         result.forEach(rowData => {
             const row = $('<tr>');
