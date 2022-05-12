@@ -2,7 +2,7 @@ $(function () {
     $.ajax({
         url: 'https://testapi2447.azurewebsites.net/TestService.asmx/TestAPI',
         method: 'POST',
-        beforeSend: function() {
+        beforeSend: function () {
             $('#loading').css("display", "block");
         },
     }).done(function (data) {
@@ -24,7 +24,7 @@ function processResult(result) {
     const theTable = $('#TableBody');
     theTable.children().remove();
     if (result instanceof Array) {
-        result.forEach(rowData => {
+        result.forEach(function (rowData) {
             const row = $('<tr>');
             for (let key in rowData) {
                 const cell = $('<td>');
