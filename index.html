@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulma Responsive Tables demo</title>
+  <!-- Bulma -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+<!-- Bulma Responsive Tables -->
+<link rel="stylesheet" href="./css/main.min.css">
+<!-- ulma Responsive TabBles -->
+<script src="./js/jquery.min.js"></script>
+</head>
+<body>
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">測試API</h1>
+      <h3 class="subtitle" id="message"></h3>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="b-table has-pagination">
+      <div class="table-wrapper has-mobile-cards">
+        <table class="table is-fullwidth is-striped is-hoverable is-fullwidth">
+          <thead>
+          <tr>
+            <th>項目文字1</th>
+            <th>項目文字2</th>
+            <th>項目文字3</th>
+            <th>項目文字4</th>
+            <th>項目文字5</th>
+          </tr>
+          </thead>
+          <tbody id="TableBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="./js/main.js"></script>
+</body>
+</html>
