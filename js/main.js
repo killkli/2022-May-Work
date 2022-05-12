@@ -21,11 +21,11 @@ $(function () {
 });
 
 function processResult(result) {
-    const theTable = $('#TableBody');
+    var theTable = $('#TableBody');
     theTable.children().remove();
     if (result instanceof Array) {
         result.forEach(function (rowData) {
-            const row = $('<tr>');
+            var row = $('<tr>');
             for (let key in rowData) {
                 const cell = $('<td>');
                 cell.text(rowData[key]);
