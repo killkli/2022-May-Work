@@ -2,7 +2,7 @@ $(function () {
     $.ajax({
         url: 'https://testapi2447.azurewebsites.net/TestService.asmx/TestAPI',
         method: 'POST',
-        beforeSend() {
+        beforeSend: function() {
             $('#loading').css("display", "block");
         },
     }).done(function (data) {
