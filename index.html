@@ -10,11 +10,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <!-- Bulma Responsive Tables -->
   <link rel="stylesheet" href="./css/main.min.css">
-  <!-- ulma Responsive TabBles -->
+  <!-- Bulma Responsive TabBles -->
+  <style>
+    div.screen-blocker {
+      display: none;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: black;
+      opacity: 0.6;
+      text-align: center;
+      z-index: 9999;
+    }
+    div.screen-blocker h1 {
+      color: white;
+      font-size: 2em;
+      margin-top: 20%;
+    }
+  </style>
   <script src="./js/jquery.min.js"></script>
 </head>
 
 <body>
+  <div class="screen-blocker" id="loading">
+    <h1>Loading...</h1>
+  </div>
   <section class="hero is-light">
     <div class="hero-body">
       <div class="container">

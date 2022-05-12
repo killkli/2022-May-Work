@@ -1,18 +1,23 @@
-
-$.ajax({
-    url: 'https://testapi2447.azurewebsites.net/TestService.asmx/TestAPI',
-    method: 'POST'
-}).done(function (data) {
-    try {
-        const parsedData = JSON.parse(data);
-        if (parsedData.state === "ok") {
-            processResult(parsedData.result);
-        } else {
-            errorHandle(parsedData.state);
+$(function () {
+    $.ajax({
+        url: 'https://testapi2447.azurewebsites.net/TestService.asmx/TestAPI',
+        method: 'POST',
+        beforeSend() {
+            $('#loading').css("display", "block");
+        },
+    }).done(function (data) {
+        try {
+            const parsedData = JSON.parse(data);
+            if (parsedData.state === "ok") {
+                processResult(parsedData.result);
+            } else {
+                errorHandle(parsedData.state);
+            }
+            $('#loading').css("display", "none");
+        } catch (err) {
+            errorHandle(err);
         }
-    } catch (err) {
-        errorHandle(err);
-    }
+    });
 });
 
 function processResult(result) {
